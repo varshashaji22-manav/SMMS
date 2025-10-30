@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Quiz | SMMS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1 id="quiz-title-header">Loading Quiz...</h1>
+            <div class="user-actions">
+                <a href="dashboard.html" class="btn btn-secondary btn-small">Back to Dashboard</a>
+            </div>
+        </header>
+        
+        <div id="message-area" class="message-area"></div> 
+        
+        <div class="card">
+            <form id="quiz-form">
+                <div class="quiz-meta">
+                    <span id="time-remaining">Time Remaining: 00:00</span>
+                </div>
+                
+                <div id="questions-container">
+                    <!-- Quiz questions will be injected here by JavaScript -->
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full-width" style="margin-top: 20px;">Submit Quiz</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="./js/main.js"></script>
+    <script src="./js/quiz-take-logic.js"></script> 
+</body>
+</html>

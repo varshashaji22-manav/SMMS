@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard | SMMS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>Teacher Dashboard</h1>
+            <div class="user-actions">
+                <span id="welcome-message" class="user-info">Welcome, Guest!</span>
+                <button id="nav-logout" class="btn btn-secondary btn-small" type="button">Logout</button>
+            </div>
+        </header>
+
+        <div class="tab-navigation" id="dashboard-tabs">
+            <button class="tab-button active" data-tab="materials" type="button">Manage Materials</button>
+            <button class="tab-button" data-tab="progress" type="button">Student Progress</button>
+            <a href="quiz-create.html" class="btn btn-primary btn-small" style="margin-left: auto;">Create New Quiz</a>
+        </div>
+
+        <div class="tab-content">
+            <!-- Tab 1: Manage Materials -->
+            <div id="materials-tab" class="tab-pane" style="display: block;">
+                <div class="card">
+                    <h2>Upload New Material</h2>
+                    <form id="upload-form">
+                        <div class="form-group">
+                            <label for="title">Material Title</label>
+                            <input type="text" id="title" name="title" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subjectId">Select Subject</label>
+                            <select id="subjectId" name="subjectId" class="form-control" required>
+                                <option value="" disabled selected>Loading Subjects...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="file">Upload File</label>
+                            <input type="file" id="file" name="file" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload Material</button>
+                        <div id="dashUploadMsg" class="message" style="margin-top: 15px;"></div>
+                    </form>
+                </div>
+                
+                <div class="card" style="margin-top: 20px;">
+                    <h2>Uploaded Materials</h2>
+                    <ul id="material-list-area" class="material-list">
+                        <li class="message message-info">Loading materials...</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tab 2: Student Progress -->
+            <div id="progress-tab" class="tab-pane hidden">
+                <div class="card">
+                    <h2>Student Progress</h2>
+                    <div id="progress-bar-container">
+                        <p class="message message-info">Fetching student results...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/teacher-logic.js"></script>
+</body>
+</html>

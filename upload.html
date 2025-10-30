@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Material | SMMS</title>
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="card auth-card">
+            <h1 class="text-center">Upload Study Material</h1>
+            <div id="message-area" class="message-area"></div> 
+            
+            <form id="upload-form" class="form-group" enctype="multipart/form-data">
+                
+                <label for="materialTitle">Title:</label>
+                <input type="text" id="materialTitle" name="title" class="form-control" required>
+                
+                <label for="subjectId">Course:</label>
+                <select id="subjectId" name="subjectId" class="form-control" required>
+                    <option value="" disabled selected>Loading Subjects...</option>
+                </select>
+
+                <label for="materialFile">Choose File:</label>
+                <input type="file" id="materialFile" name="file" class="form-control-file" required>
+
+                <button type="submit" class="btn btn-success btn-full-width">Upload</button>
+            </form>
+            
+            <p class="text-center switch-link"><a href="dashboard.html">Back to Dashboard</a></p>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/upload-logic.js"></script>
+</body>
+</html>

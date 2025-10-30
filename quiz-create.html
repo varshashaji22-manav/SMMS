@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <title>Create Quiz | SMMS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>Create New Quiz</h1>
+            <div class="user-actions">
+                <a href="teacher.html" class="btn btn-secondary btn-small">Back to Dashboard</a>
+            </div>
+        </header>
+        
+        <div id="message-area" class="message-area"></div> 
+        
+        <div class="card">
+            <form id="quiz-form">
+                <h2>Quiz Details</h2>
+                <div class="form-group">
+                    
+                    <label for="quizTitle">Quiz Title</label>
+                    <input type="text" id="quizTitle" name="title" class="form-control" required>
+
+                    <label for="subjectSelect">Select Subject</label>
+                    <select id="subjectSelect" name="subjectId" class="form-control" required> 
+                        <option value="" disabled selected>Loading Subjects...</option>
+                    </select>
+
+                </div>
+
+                <h2>Quiz Questions</h2>
+                <div id="questions-container" class="form-group">
+                    </div>
+
+                <button type="button" id="addQuestionBtn" class="btn btn-secondary btn-small">Add Question</button>
+                <button type="submit" class="btn btn-primary btn-full-width" style="margin-top: 20px;">Save and Create Quiz</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="./js/main.js"></script>
+    <script src="./js/quiz-logic.js"></script> 
+</body>
+</html>
+

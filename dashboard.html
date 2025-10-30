@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title-tag">Dashboard | SMMS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1 id="dashboard-title">Dashboard</h1>
+            <div class="user-actions">
+                <span id="welcome-message" class="user-info">Welcome, Guest!</span>
+                <button id="nav-logout" class="btn btn-secondary btn-small" type="button" title="Log out of the system">Logout</button>
+            </div>
+        </header>
+
+        <div class="tab-navigation" id="dashboard-tabs">
+    
+    <button class="tab-button" data-tab="materials" type="button">My Materials</button> 
+    
+    <button class="tab-button" data-tab="quizzes" type="button">Quizzes / Progress</button>
+
+</div>
+
+        <div class="tab-content" id="tab-content">
+            
+            <div id="materials-tab" class="card tab-pane hidden">
+                <h2>Uploaded Materials</h2>
+                <ul id="material-list-area" class="material-list">
+                    <li class="message message-info">Loading materials...</li>
+                </ul>
+            </div>
+
+            <div id="quizzes-tab" class="card tab-pane hidden">
+                <h2>Available quizzes</h2>
+                 <div id="quiz-list-container"></div>
+                <p>This section will list available quizzes and your progress.</p>
+            </div>
+            
+           
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/main.js"></script>
+    <script src="./js/dashboard-logic.js"></script> 
+</body>
+</html>
+
